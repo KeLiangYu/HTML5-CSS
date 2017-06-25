@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+  <title>U103B122_1227</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js" type="text/javascript"></script>
+  <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="css/bootstrap-theme.min.css" rel="stylesheet" type="text/css">
+  <link href="css/U103B122_1227.css" rel="stylesheet" type="text/css">
+  <script>
+    (function(i,s,o,g,r,a,m){
+      i['GoogleAnalyticsObject']=r;
+      i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();
+      a=s.createElement(o),m=s.getElementsByTagName(o)[0];
+      a.async=1;
+      a.src=g;
+      m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-43927413-1', 'csscoke.com');
+    ga('send', 'pageview');
+  </script>
+</head>
+<body>
+    <div id="frame" class="container">
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-xs-6">
+          <h1 class="logo"><a href="U103B122_1227.html"><img src="images/logo.png" alt="弘光科技大學"></a></h1>
+        </div>
+        <div class="col-lg-6 col-md-6 col-xs-6">
+          <div class="corner">
+            <a href="U103B122_1227.html"><img src="images/corner-home.png" alt="弘光科技大學" class="corner-home">回首頁</a>
+            <a href="?Trad2Simp=y">轉換簡體</a>
+            <a href="?lang=en&amp;Trad2Simp=n">English</a>
+            <a href="/sitemap/site_map.php">網站導覽</a>
+            <a href="#">站內搜尋</a>
+          </div>
+          <div class="menu_search">
+            <form method="get" action="http://www.google.com/custom" class="rpofkv">
+              <input name="q" class="q" value="" type="text">
+              <input name="sa" class="sa" value="" style="background-image:url('images/sa.jpg')" type="submit">
+              <input name="ie" class="ie" value="utf-8" type="hIDden">
+              <input name="oe" class="oe" value="utf-8" type="hIDden">
+              <input name="cof" class="cof" value="AH:center;AWFID:03de271f1940eea3;" type="hIDden">
+              <input name="domains" class="domains" value="www.hk.edu.tw" type="hIDden"><br>
+              <input name="sitesearch" class="sitesearch1" value="www.hk.edu.tw" checked="checked" type="radio">
+              <label for="sitesearch1">本站</label>
+              <input name="sitesearch" class="sitesearch2" value="" type="radio">
+              <label for="sitesearch2">站外 </label>
+              <input name="PreviousPage" value="%2Fmain.php" type="hIDden">
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-xs-12">
+          <nav>
+            <ul class="sub1">
+              <li><a href="#">關於弘光</a>
+                <ul class="sub2">
+                  <li><a href="#">校史沿革簡介</a></li>
+                  <li><a href="#">未來發展願景</a></li>
+                  <li><a href="#">辦學理念闡述</a></li>
+                  <li><a href="#">校園環境介紹</a></li>
+                  <li><a href="#">本校辦學特色</a></li>
+                  <li><a href="#">交通路線說明</a></li>
+                  <li><a href="#">學校現況簡介</a></li>
+                  <li><a href="#">企業社會責任專區</a></li>
+                  <li><a href="#">弘光科大電子報</a></li>
+                </ul>
+              </li>
+              <li><a href="#">招生資訊</a></li>
+              <li><a href="#">在校學生</a></li>
+              <li><a href="#">教師職員</a></li>
+              <li><a href="#">校友來賓</a></li>
+              <li><a href="#">教學單位</a>
+                <ul class="sub2">
+                  <li><a href="#">醫護學院</a></li>
+                  <li><a href="#">人文社會學院</a></li>
+                  <li><a href="#">民生學院</a></li>
+                  <li><a href="#">管理學院</a></li>
+                  <li><a href="#">工學院</a></li>
+                  <li><a href="#">通識學院</a></li>
+                  <li><a href="#">其他單位</a></li>
+                </ul>
+              </li>
+              <li><a href="#">行政單位</a>
+                <ul class="sub2">
+                  <li><a href="#">校長室</a></li>
+                  <li><a href="#">秘書室</a></li>
+                  <li><a href="#">教務處</a></li>
+                  <li><a href="#">學生事務處</a></li>
+                  <li><a href="#">總務處</a></li>
+                  <li><a href="#">研究發展處</a></li>
+                  <li><a href="#">國際暨兩岸事務處</a></li>
+                  <li><a href="#">圖書資訊中心</a></li>
+                  <li><a href="#">典範產學研發總中心</a></li>
+                  <li><a href="#">推廣教育中心</a></li>
+                  <li><a href="#">教學資源中心</a></li>
+                  <li><a href="#">教育品質發展中心</a></li>
+                  <li><a href="#">其他單位</a></li>
+                </ul>
+              </li>
+              <li><a href="#">資訊服務</a>
+                <ul class="sub2">
+                  <li><a href="#">單一登入平台</a></li>
+                  <li><a href="#">網路服務平台</a></li>
+                </ul>
+              </li>
+              <li><a href="#">最新公告</a></li>
+              <li><a href="#">相關機構</a>
+                <ul class="sub2">
+                  <li><a href="#">弘光科大附設老人醫院</a></li>
+                  <li><a href="#">弘光科大附設幼兒園</a></li>
+                  <li><a href="#">光田綜合醫院</a></li>
+                  <li><a href="#">弘道老人福利基金會</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-xs-12">
+          <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#carousel-example-generic" data-slide-to="0" class="active"><br></li>
+              <li data-target="#carousel-example-generic" data-slide-to="1"><br></li>
+              <li data-target="#carousel-example-generic" data-slide-to="2"><br></li>
+              <li data-target="#carousel-example-generic" data-slide-to="3"><br></li>
+              <li data-target="#carousel-example-generic" data-slide-to="4"><br></li>
+              <li data-target="#carousel-example-generic" data-slide-to="5"><br></li>
+              <li data-target="#carousel-example-generic" data-slide-to="6"><br></li>
+              <li data-target="#carousel-example-generic" data-slide-to="7"><br></li>
+              <li data-target="#carousel-example-generic" data-slide-to="8"><br></li>
+            </ol>
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+              <div class="item active">
+                <img src="images/45_51e87aca.jpg" alt="...">
+                <div class="carousel-caption">
+                </div>
+              </div>
+              <div class="item">
+                <img src="images/44_d6755ea8.jpg" alt="...">
+                <div class="carousel-caption">
+                </div>
+              </div>
+              <div class="item">
+                <img src="images/43_2eb2b70a.jpg" alt="...">
+                <div class="carousel-caption">
+                </div>
+              </div>
+              <div class="item">
+                <img src="images/42_9e814894.jpg" alt="...">
+                <div class="carousel-caption">
+                </div>
+              </div>
+              <div class="item">
+                <img src="images/39_30148d3e.jpg" alt="...">
+                <div class="carousel-caption">
+                </div>
+              </div>
+              <div class="item">
+                <img src="images/38_81c11f00.jpg" alt="...">
+                <div class="carousel-caption">
+                </div>
+              </div>
+              <div class="item">
+                <img src="images/32_d1a481f5.jpg" alt="...">
+                <div class="carousel-caption">
+                </div>
+              </div>
+              <div class="item">
+                <img src="images/30_539e2ad8.jpg" alt="...">
+                <div class="carousel-caption">
+                </div>
+              </div>
+              <div class="item">
+                <img src="images/26_8425fe6b.jpg" alt="...">
+                <div class="carousel-caption">
+                </div>
+              </div>
+            </div>
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-xs-12">
+          <h2 class="h2t">弘光焦點 HK News</h2>
+        </div>
+        <div class="col-lg-4 col-md-4 col-xs-4">
+          <div class="news">
+            <img src="images/12292_8bbffce9.jpg" alt="裝飾性圖片">
+            <a href="#">老福系學生設計放大字體「包青添」遊戲包 全國老人福祉產品賽奪冠</a>
+            <p>「把課本上的理論變實務很難，但是我們做到了！」弘光科大老人福利與事業系大四學生，參加2016年第二屆全國技專校院老人福祉產品服務創...</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-xs-4">
+          <div class="news">
+            <img src="images/12193_f3da3091.jpg" alt="裝飾性圖片">
+            <a href="#">透過參賽自我鞭策、苦尋肉品練習「絕不放棄」 餐旅系張礽豪獲技職之光</a>
+            <p>「高中餐飲科畢業時發現自己什麼都不會，進大學後才真正有興趣，參加競賽是跟自己比賽，一次要比一次好」弘光科技大學餐旅管理系畢業生張礽...</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-xs-4">
+          <div class="news">
+            <img src="images/10930_6a493431.jpg" alt="裝飾性圖片">
+            <a href="#">弘光科大獲科技部補助大專學生研究計畫48件  蟬聯全國公私立科大第一名！</a>
+            <p>科技部105年度補助大專學生研究計畫弘光科大獲補助48件，件數連續二年居全國公私立科大之冠，其中環境與安全衛生工程系12件、資訊管...</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-md-4 col-xs-4">
+          <h2 class="h2t">活動專區 Activities</h2>
+          <ul>
+            <li><a href="#">歡迎加入《弘光科技大學校友會粉絲團》</a></li>
+            <li><a href="#">食科系106年3-4月開辦專業訓練班...</a></li>
+            <li><a href="#">106雙聯學位 &amp; 交換學生說明會</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-4 col-xs-4">
+          <h2 class="h2t">熱門連結 Hot link</h2>
+          <ul>
+            <li><a href="#">弘光整體發展經費</a></li>
+            <li><a href="#">採購資訊</a></li>
+            <li><a href="#">105學年度行事曆</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-xs-12">
+          <img src="images/cache.3965_f6f76d44.jpg.w294_h294.jpg" alt="裝飾性圖片">
+          <h2 class="h2t">重點計畫 Key Plans</h2>
+          <a href="#">技職體系典範科技大學</a>
+          <p>本校獲教育部典範科大計畫補助成立典範產學研發總中心，為中部地區唯二獲經費補助之典範科技大學，未來將落實產學無縫接軌的目標，打造企業愛用優秀人才。弘光科大為國內醫護與健康民生領域之典範科技大學，...</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-2 col-md-2 col-xs-2">
+          <div class="counter">
+            <em>瀏覽人數</em>14034918<br>
+            <a class="login_link" href="#">Login</a>
+            <a class="aplus" href="#" target="_blank">
+              <img src="images/aplus.jpg" alt="無障礙標章">
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-5 col-md-5 col-xs-5">
+          <p>本網站著作權屬於弘光科技大學，請詳見<a href="#">使用規則</a>。</p>
+          <p>地址：43302臺中市沙鹿區臺灣大道六段1018號<a href="#" target="_blank">隱私權政策說明</a></p>
+          <p>Tel：886-4-26318652　Fax：886-4-26310744　E-Mail：<a href="#">sec@web.hk.edu.tw</a></p>
+        </div>
+        <div class="col-lg-5 col-md-5 col-xs-5">
+          <ul class="social_links">
+            <li><a href="https://www.facebook.com/welovehku" target="_blank">Facebook <img src="images/facebook.png" alt="Facebook" height="24" width="24"></a></li>
+            <li><a href="https://www.youtube.com/user/HungKuangTV/" target="_blank">Youtube  <img src="images/youtube.png" alt="Youtube"></a></li>
+            <li><a href="http://www.hk.edu.tw/feeds/news.php?class=101" target="_blank">RSS feed  <img src="images/rss-feed.png" alt="RSS feed"></a></li>
+            <li><a href="http://podcast.hk.edu.tw/" target="_blank">Itunes  <img src="images/itunes.png" alt="Itunes"></a></li>
+            <li><a href="#" target="_blank">Twitter<img src="images/twitter.png" alt="Facebook"></a></li>
+            <li><a href="#" target="_blank">Google+<img src="images/google-plus.png" alt="Facebook"></a></li>
+          </ul>
+        </div>
+      </div>
+  </div>
+</body></html>

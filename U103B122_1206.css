@@ -1,0 +1,48 @@
+body{
+  text-align: center;
+}
+table{
+  margin-left: auto;
+  margin-right: auto;
+  
+  border-style: solid;
+  border-color: black;
+  border-width: 4px;
+}
+td{
+  width: 800px;
+  text-align: center;
+}
+.h101{
+  border-top: double blue 6px;
+  border-bottom: double blue 6px;
+  text-align: center;
+}
+.h301{
+  color: red;
+  font-size: 18px;
+}
+.ul01{
+  list-style: circle inside;
+}
+.ul02{
+  list-style: square outside;
+}
+.ul03{
+  list-style: lower-roman inside;
+}
+.ul04{
+  list-style: decimal outside;
+}
+.ul05{
+  list-style: decimal-leading-zero inside;
+}
+.ul06{
+  list-style: disc outside;
+}
+.ul07{
+  list-style: lower-greek inside;
+}
+.ul08{
+  list-style: circle outside url(easter_rabbit.png);
+}

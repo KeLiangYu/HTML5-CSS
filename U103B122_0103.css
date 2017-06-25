@@ -1,0 +1,10 @@
+.main{width: 100%;}
+.left{width: 15%;background-color: blue;height: 460px;float: left;}
+.right{width: 85%;background-color: white;height: 460px;float: right;}
+.top{width: 100%;background-color: yellow;height: 80px;float: top;}
+.down{width: 100%;background-color: grey;height: 380px;float: both;}
+
+@media screen and (max-width: 639px){
+  .right{display: none;}
+  .left{width: 100%;background-color: grey;}
+}

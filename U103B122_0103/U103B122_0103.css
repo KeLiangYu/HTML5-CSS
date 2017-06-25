@@ -1,0 +1,74 @@
+.main{width: 100%;height: 700px;}
+.left{width: 20%;background-color: skyblue;height: 100%;float: left;}
+.right{width: 80%;background-color: white;height: 100%;float: right;}
+.top{width: 100%;background-color: yellow;height: 10%;padding: 5px 25px 25px 15px;}
+.down{width: 100%;background-image: url(ch13/bg15.jpg);height: 90%;padding: 15px 5px 25px 25px;clear: both;}
+
+@media screen and (max-width: 680px){
+  .left{width: 100%;height: 10%;}
+  .right{width: 100%;}
+  .top{width: 100%;background-color: yellow;height: 20%;}
+  .down{height: 70%;}
+  #img02{display: none;}
+  #ch{display: none;}
+}
+.button{
+  background-color: #d3d3ab;
+  border: 1px solid black;
+  color: black;
+  padding: 10px 24px;;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.button2{background-color: #9ebb62;padding: 5px 37px;border-radius: 30px;}
+.button3{background-color: #e6b8b5;padding: 5px 37px;border-radius: 30px;}
+.en{
+  font-family: 'Shadows Into Light', cursive;
+  text-align: left;
+}
+.s1{
+  font-size: 12pt;
+  border-left: 16px solid #33ccff;
+  border-bottom: 1px solid #33ccff;
+  text-decoration: none;
+  padding-left: 3px;
+}
+.s1:hover{
+  border-left: 16px solid red;
+  border-bottom: 1px solid red;
+  padding-left: 3px;
+}
+.h101{
+  border-top: solid cornflowerblue 5px;
+  border-bottom: solid cornflowerblue 5px;
+  text-align: center;
+}
+#img01{border: dashed red 3px;}
+#img02{border: dotted darkblue 3px;}
+.imgborder0{border: 1px solid gray;}
+.imgborder1{border: 1px solid gray;-webkit-filter: grayscale(1);}
+.imgborder2{border: 1px solid gray;-webkit-filter: sepia(1);}
+.imgborder3{border: 1px solid gray;-webkit-filter: saturate(0.5);}
+.imgborder4{border: 1px solid gray;-webkit-filter: hue-rotate(90deg);}
+.imgborder5{border: 1px solid gray;-webkit-filter: invert(1);}
+.imgborder6{border: 1px solid gray;-webkit-filter: opacity(.2);}
+.imgborder7{border: 1px solid gray;-webkit-filter: brightness(.5);}
+.imgborder8{border: 1px solid gray;-webkit-filter: contrast(2);}
+.imgborder9{border: 1px solid gray;-webkit-filter: blur(3px);}
+.imgborder10{border: 1px solid gray;-webkit-filter: drop-shadow(5px 5px 5px #333);}
+.ul0{list-style: circle inside;}
+.ul1{list-style: disc inside;}
+.ul2{list-style: square inside;}
+.ul3{list-style: lower-roman inside;}
+.ul4{list-style: upper-roman inside;}
+.ul5{list-style: decimal inside;}
+.ul6{list-style: lower-alpha inside;}
+.ul7{list-style: upper-alpha inside;}
+.ul8{list-style: decimal-leading-zero inside;}
+.ul9{list-style: cjk-ideographic inside;}
+.ul10{list-style: lower-greek inside;}
+.ul11{list-style: url(easter_rabbit.png) inside;}

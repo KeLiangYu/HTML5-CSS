@@ -1,0 +1,43 @@
+.imgborder0{
+  border: 1px solid gray;
+}
+.imgborder1{
+  border: 1px solid gray;
+  -webkit-filter: grayscale(1);
+}
+.imgborder2{
+  border: 1px solid gray;
+  -webkit-filter: sepia(1);
+}
+.imgborder3{
+  border: 1px solid gray;
+  -webkit-filter: saturate(0.5);
+}
+.imgborder4{
+  border: 1px solid gray;
+  -webkit-filter: hue-rotate(90deg);
+}
+.imgborder5{
+  border: 1px solid gray;
+  -webkit-filter: invert(1);
+}
+.imgborder6{
+  border: 1px solid gray;
+  -webkit-filter: opacity(.2);
+}
+.imgborder7{
+  border: 1px solid gray;
+  -webkit-filter: brightness(.5);
+}
+.imgborder8{
+  border: 1px solid gray;
+  -webkit-filter: contrast(2);
+}
+.imgborder9{
+  border: 1px solid gray;
+  -webkit-filter: blur(3px);
+}
+.imgborder10{
+  border: 1px solid gray;
+  -webkit-filter: drop-shadow(5px 5px 5px #333);
+}

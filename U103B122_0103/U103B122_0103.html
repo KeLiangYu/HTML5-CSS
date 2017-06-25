@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    
+    <title>U103B122_0103</title>
+    <link href="U103B122_0103.css" rel="stylesheet" type="text/css">
+  <script language="JavaScript">
+      function ChangeClass(id){
+        var cssid = id.split("_")[1];
+        document.getElementById("img01").className = "imgborder"+cssid;
+        document.getElementById("img02").className = "imgborder"+cssid;
+      }
+    </script>
+  </head>
+<body>
+  <div class="main">
+    <div class="left">
+      <center>
+        <button class="button button2" onclick="javascript:location.href='U103B122_0103.html'">濾鏡功能</button>
+        <button class="button button3" onclick="javascript:location.href='U103B122_0103_1.html'">項目符號</button>
+      </center>
+    </div>
+    <div class="right">
+      <div class="top">
+        <button class="button" id="but_0" onclick="ChangeClass(this.id)">一般</button>
+        <button class="button" id="but_1" onclick="ChangeClass(this.id)">灰階</button>
+        <button class="button" id="but_2" onclick="ChangeClass(this.id)">懷舊</button>
+        <button class="button" id="but_3" onclick="ChangeClass(this.id)">飽和度</button>
+        <button class="button" id="but_4" onclick="ChangeClass(this.id)">色相旋轉</button>
+        <button class="button" id="but_5" onclick="ChangeClass(this.id)">負片</button>
+        <button class="button" id="but_6" onclick="ChangeClass(this.id)">透明化</button>
+        <button class="button" id="but_7" onclick="ChangeClass(this.id)">亮度</button>
+        <button class="button" id="but_8" onclick="ChangeClass(this.id)">對比</button>
+        <button class="button" id="but_9" onclick="ChangeClass(this.id)">模糊化</button>
+        <button class="button" id="but_10" onclick="ChangeClass(this.id)">下拉陰影</button>
+      </div>
+      <div class="down">
+        <h1 class="h101">紐西蘭遊記</h1>
+        <center>
+        <img id="img01" src="ch16/landmark.jpg" height="225px" width="250px">
+        <img id="img02" src="ch16/street.gif" height="225px" width="316px">
+          </center>
+        <p class="en">It was the first time for me to take a domestic flight from Kaohsiung International Airport to Magong city,
+          Penghu.Interestingly there is no boarding gate,I had to walk onto the plane.The flight duration was
+          around 30 minutes, but we encountered air turbulence from a nearby typhoon when landing.The airplane
+          bounced up and down to the ground just like dribbling a basketball.Hence we had the second landing.Yes
+          it was successful.Otherwise you wouldn't see this article.
+        </p>
+        <p id="ch">我們第三天住進了一間B&amp;B旅館，紐西蘭的B&amp;B有點像歐洲的青年旅館，通常有露營車的停靠
+          區和小木屋。公共區有衛浴、廁所、廚房、餐廳，都非常乾淨。而且廚房裡什麼都有，很方
+          便。三人以上的房間多半是上下舖，附有一個水槽及流理台，房價在2000台幣上下，一家3-5
+          口可以省下不少住宿費。
+        </p>
+      </div>
+    </div>
+  </div>
+</body></html>

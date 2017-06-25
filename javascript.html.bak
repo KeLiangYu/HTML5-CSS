@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <title></title>
+  </head>
+  <body>
+    <script language="JavaScript">
+      dt = new Date();
+      document.write(dt.toLocaleString());
+    </script>
+    <br>
+    <button onclick="document.write('<p>Hello</p>');">
+      變身
+    </button>
+    <br><br>
+    <button onclick="var p = document.getElementById('text');
+                     p.innerHTML='<b>Hello!</b>';
+                     ">改文字</button>
+    <br>
+    <p id="text">Hi~</p>
+    <br>
+    <script language="JavaScript">
+      function addBook(){
+        var list = document.getElementById('list');
+        var book = document.getElementById('book');
+        list.innerHTML +='<li>'+book.vaule+'</li>';
+      }
+    </script>
+    <p>
+      書面：<input type="text" id="book">
+      <button onclick = "addBook()">新增</button>
+    </p>
+    <ul id="list"></ul>
+  </body>
+</html>

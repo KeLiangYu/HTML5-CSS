@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <script type="text/javascript">
+      var canvas;
+      var ctx;
+      var back = new Image();
+      var oldBack = new Image();
+      var ship = new Image();
+      var shipX=0;
+      var shipY=0;
+      var oldShipX=0;
+      var oldShipY=0;
+      
+      var canvas2;
+      var ctx2;
+      var bomb = new Image();
+      var direction = "R";
+      var score = 0;
+      
+      function canvasSpaceGame(){
+        canvas = document.getElementById("myCanvas");
+        canvas2 = document.getElementById("myScore");
+        if (canvas2.getContext){
+        	ctx2 = canvas2.getContext("2d");
+        }
+        
+        if (canvas.getContext){
+        	ctx = canvas.getContext("2d");
+          ctx.fillStyle="black";
+          ctx.rect(0,0,300,300);
+          ctx.fill();
+          
+          back = ctx.getImageData(0,0,30,30);
+          
+          stars();
+          
+          makeShip();
+        }
+        
+        gameLoop = setInterval(doGameLoop,16);
+        
+        window.addEventListener("keydown",whatKey,true);
+      }
+      
+      function stars(){
+        for (i=0; i<=50; i++){
+          var x=Math.floor(Math.random()*299);
+          var y=Math.floor(Math.random()*299);
+          
+          ctx.fillStyle="white";
+          if(x<30 || y<30){ctx.fillStyle="black";}
+          
+          ctx.beginPath();
+          ctx.arc(x,y,3,0,Math.PI*2,true);
+          ctx.closePath();
+          ctx.fill();
+        }
+        
+        oldBack = ctx.getImageData(0,0,30,30);
+      }
+      
+      function makeShip(){
+        ctx.beginPath();
+        ctx.moveTo(28.4,16.9);
+        ctx.bezierCurveTo(28.4,19.7,22.9,22.0,16.0,22.0);
+        ctx.bezierCurveTo( 9.1,22.0, 3.6,19.7, 3.6,16.9);
+        ctx.bezierCurveTo( 3.6,14.1, 9.1,11.8,16.0,11.8);
+        ctx.bezierCurveTo(22.9,11.8,28.4,14.1,28.4,16.9);
+        ctx.closePath();
+        ctx.fillStyle="rgb(222,103,0)";
+        ctx.fill();
+        
+        ctx.beginPath();
+        ctx.moveTo(22.3,12.0);
+        ctx.bezierCurveTo(23.3,13.3,19.4,14.3,15.9,14.3);
+        ctx.bezierCurveTo(12.4,14.3, 9.6,13.3, 9.6,12.0);
+        ctx.bezierCurveTo( 9.6,10.8,12.4, 9.7,15.9, 9.7);
+        ctx.bezierCurveTo(19.4, 9.7,22.3,10.8,22.3,12.0);
+        ctx.closePath();
+        ctx.fillStyle="rgb(51,190,0)";
+        ctx.fill();
+        
+        ship = ctx.getImageData(0,0,30,30);
+        ctx.putImageData(oldBack,0,0);
+      }
+      
+      function doGameLoop(){
+        ctx.putImageData(oldBack,oldShipX,oldShipY);
+        ctx.putImageData(ship,shipX,shipY);
+      }
+      
+      function whatKey(evt){
+        var flag=0;
+        oldShipX=shipX;
+        oldShipY=shipY;
+        oldBack=back;
+        
+        switch (evt.keyCode){
+          case 37:			//左移
+            shipX=shipX-30;
+            if(shipX<0){
+              shipX=0;
+              flag=1;
+            }
+            direction="L";
+            break;
+          case 38:			//上移
+            shipY=shipY-30;
+            if(shipY<0){
+              shipY=0;
+              flag=1;
+            }
+            direction="D";
+            break;
+          case 39:			//右移
+            shipX=shipX+30;
+            if(shipX>270){
+              shipX=270;
+              flag=1;
+            }
+            direction="R";
+            break;
+          case 40:			//下移
+            shipY=shipY+30;
+            if(shipY>270){
+              shipY=270;
+              flag=1;
+            }
+            direction="U";
+            break;
+        }
+        if(flag){
+          shipX=oldShipX;
+          shipY=oldShipY;
+          back=oldBack;
+          score = score -1;
+        }
+        else{
+          back=ctx.getImageData(shipX,shipY,30,30);
+        }
+        
+        score = score + 1;
+        ctx2.clearRect(0,0,300,300);
+        ctx2.font="20 point Ariel";
+        ctx2.fillText("Score",20,15);
+        ctx2.fillText(score,100,15);
+        
+        collrdeTest();
+      }
+      
+      function drawAsterouds(){
+        
+      }
+      
+      function bang{
+        alert("Game over! You hit an asteroid.");
+        clearTimeout(gameLoop);
+        window.removeEventListenner("keydown",whatKey,true);
+      }
+      
+      function youWin{
+        alert("Game over! You made it to home base.");
+        clearTimeout(gameLoop);
+        window.removeEventListenner("keydown",whatKey,true);
+      }
+      
+      function meutralize{
+        switch(direction){
+          case "D":
+            break;
+          case "U":
+            break;
+          case "L":
+            break;
+          case "K":
+            break;
+          default:
+        }
+      }
+    </script>
+    <title></title>
+  </head>
+  <body onload="canvasSpaceGame()">
+    <h1> Canvas Space Game </h1>
+    <canvas id="myCanvas" width="300" height="300"> </canvas>
+  </body>
+</html>

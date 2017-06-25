@@ -1,0 +1,44 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+.main_background{
+  width: 720px;
+  background-color: #FFAAEE;
+  position: relative;
+  margin: 0 auto auto auto;
+}
+.top{
+  background-color: #0000C6;
+  width: 720px;
+  height: 50px;
+  text-align: center;
+}
+.main_menu{
+  width: 150px;
+  height: 470px;
+  background-color: #663399;
+  position: absolute;
+  top: 70px;
+  left: 0px;
+}
+.menu_item{
+  width: 120px;
+  height: 25px;
+  background-color: #66FF99;
+  margin: 10px auto auto auto;
+}
+.page_content{
+  width: 570px;
+  height: 470px;
+  background-color: #99FFFF;
+  position: relative;
+  left: 150px;
+  top: 20px;
+}
+.footer{
+  background-color: #00DB00;
+  width: 720px;
+  height: 100px;
+  text-align: center;
+}

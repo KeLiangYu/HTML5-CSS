@@ -1,0 +1,29 @@
+.c2{
+  font-size: 20px;
+  border-style: double;
+  border-color: green;
+  border-width: 3px;
+}
+.t2{
+  border-top-style: solid;
+  border-top-color: purple;
+  border-top-width: 3px;
+  
+  border-bottom-style: dashed;
+  border-bottom-color: green;
+  border-bottom-width: 3px;
+  
+  border-left-style: dotted;
+  border-left-color: blue;
+  border-left-width: 3px;
+  
+  border-right-style: double;
+  border-right-color: red;
+  border-right-width: 3px;
+}
+td{
+  border-bottom-style: solid;
+  border-bottom-color: purple;
+  border-bottom-width: 3px;
+  font-size: 20px;
+}

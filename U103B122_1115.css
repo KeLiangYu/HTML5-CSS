@@ -1,0 +1,56 @@
+body{
+  font-size: 24px;
+}
+.s1{
+  vertical-align: super;
+}
+.s2{
+  vertical-align: sub;
+}
+.en01{
+  text-align: left;
+  font-family: 'Shrikhand', cursive;
+  font-size: 1.5em;
+  font-style: italic;
+}
+.ch01{
+  text-align: left;
+  font-family: 標楷體;
+  font-size: middle;
+  font-weight: bold;
+}
+.en02{
+  text-align: justify;
+  font-family: 'Ravi Prakash', cursive;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.ch02{
+  text-align: justify;
+  font-family: 新細明體;
+  font-size: 120%;
+  font-style: italic;
+}
+.en03{
+  text-align: right;
+  font-family: 'Anton', sans-serif;
+  font-size: smaller;
+  text-decoration: line-through;
+}
+.ch03{
+  text-align: left;
+  font-family: 微軟正黑體;
+  font-size: larger;
+  text-decoration: underline;
+}
+.en04{
+  text-align: justify;
+  font-family: Times New Roman;
+  font-size: xx‐large;
+  text-transform: capitalize;
+}
+.ch04{
+  text-align: justify;
+  font-family: 新細明體;
+  font-size: xx‐small;
+}

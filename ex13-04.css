@@ -1,0 +1,20 @@
+.gr{
+  background-color: green;
+}
+.li{
+  background-color: lime;
+}
+.ol{
+  background-color: olive;
+}
+.bd{
+  font-family: 標楷體;
+  background-image:url(bg15.jpg);
+}
+.text1{
+  background-image:url(bg07.jpg);
+  font-size: 36px;
+}
+.text2{
+  background-image:url(bg14.jpg);
+}

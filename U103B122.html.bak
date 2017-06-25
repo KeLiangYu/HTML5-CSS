@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+      <html>
+        <head>
+          <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+          <script type="text/javascript">
+      function draw(){
+        var c = document.getElementById("myCanvas");
+      	var ctx = c.getContext("2d");
+        ctx.fillStyle="Red";
+      	ctx.beginPath();
+      	ctx.arc(60,60,40,0,2*Math.PI);
+      	ctx.fill();
+        ctx.closePath();
+      	ctx.stroke();
+        
+        ctx.fillStyle="DodgerBlue";
+      	ctx.beginPath();
+      	ctx.arc(160,60,40,0,2*Math.PI);
+      	ctx.fill();
+        ctx.closePath();
+      	ctx.stroke();
+        
+        ctx.fillStyle="Yellow";
+      	ctx.beginPath();
+      	ctx.arc(60,160,40,0,2*Math.PI);
+      	ctx.fill();
+        ctx.closePath();
+      	ctx.stroke();
+        
+        ctx.fillStyle="Purple";
+      	ctx.beginPath();
+      	ctx.arc(160,160,40,0,2*Math.PI);
+      	ctx.fill();
+        ctx.closePath();
+      	ctx.stroke();
+        
+        ctx.fillStyle="Green";
+      	ctx.beginPath();
+      	ctx.arc(110,110,40,0,2*Math.PI);
+      	ctx.fill();
+        ctx.closePath();
+      	ctx.stroke();
+        
+        ctx.fillStyle="DodgerBlue";
+        ctx.beginPath();
+        ctx.moveTo(60,35);
+        ctx.lineTo(40,70);
+        ctx.lineTo(80,70);
+        ctx.fill();
+        ctx.closePath();
+        
+        ctx.fillStyle="Yellow";
+        ctx.beginPath();
+        ctx.moveTo(160,35);
+        ctx.lineTo(140,70);
+        ctx.lineTo(180,70);
+        ctx.fill();
+        ctx.closePath();
+        
+        ctx.fillStyle="Purple";
+        ctx.beginPath();
+        ctx.moveTo(60,135);
+        ctx.lineTo(40,170);
+        ctx.lineTo(80,170);
+        ctx.fill();
+        ctx.closePath();
+        
+        ctx.fillStyle="Green";
+        ctx.beginPath();
+        ctx.moveTo(160,135);
+        ctx.lineTo(140,170);
+        ctx.lineTo(180,170);
+        ctx.fill();
+        ctx.closePath();
+        
+        ctx.fillStyle="Red";
+      	ctx.beginPath();
+      	ctx.rect(82,98,57,24);
+      	ctx.fill();
+        ctx.closePath();
+      	ctx.stroke();
+      }
+    </script>
+          <title></title>
+          <link title="mycss" href="U103B122.css" rel="stylesheet" type="text/css">
+        </head>
+        <body onload="draw()">
+          <form> 1.請完成會員註冊頁面的功能<br>
+            帳號：<input name="accounts" size="20" minlength="2" maxlength="10" required=""
+
+              type="text"><br>
+            密碼：<input name="passwd" type="password"><br>
+            姓名：<input name="user_name" type="text"><br>
+            生日：<input name="user_date" placeholder="2014-09-18" type="date"><br>
+            電話：<input name="user_mobile" maxlength="10" pattern="[0-9]*" type="text"><br>
+            E‐mail：<input name="user_email" pattern="[a-zA-Z0-9_]+@[a-zA-Z0-9._]+"
+
+              required="" type="text"><br>
+            <input value="送出資料" type="submit">
+      <input value="清除重填" type="reset">
+    </form>
+    2.請完成下列 Canvas 功能的繪圖<br>
+    <canvas id="myCanvas" width="300" height="300"></canvas><br>
+    3.請搭配 css 完成下列頁面的功能<br>
+    <h3> 塞 上 曲 </h3>
+    <h2>
+      <p class="green_text">作者: 王 昌 齡&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;詩體: 樂 府</p>
+      <p><font class="red_text">蟬 </font> 鳴 桑 樹 間 ， <font class="blue_text">八 </font>月 蕭 關 道 。</p>
+      <p><font class="red_text">出 </font> 塞 復 入 塞 ， <font class="blue_text">處 </font>處 黃 蘆 草 。</p>
+      <p><font class="red_text">從 </font> 來 幽 并 客 ， <font class="blue_text">皆 </font>向 沙 場 老 。</p>
+      <p><font class="red_text">莫 </font> 作 游 俠 兒 ， <font class="blue_text">矜 </font>誇 紫 騮 好 。</p>
+    </h2>
+</body></html>

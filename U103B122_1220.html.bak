@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <title>U103B122_1220</title>
+    <link href="U103B122_1220.css" rel="stylesheet" type="text/css">
+    <script language="JavaScript">
+      function ChangeClass(id){
+        var cssid = id.split("_")[1];
+        document.getElementById("img01").className = "imgborder"+cssid;
+      }
+    </script>
+  </head>
+  <body>
+    <center>
+      <button id="but_0" onclick="ChangeClass(this.id)">一般</button>
+      <button id="but_1" onclick="ChangeClass(this.id)">灰階</button>
+      <button id="but_2" onclick="ChangeClass(this.id)">懷舊</button>
+      <button id="but_3" onclick="ChangeClass(this.id)">飽和度</button>
+      <button id="but_4" onclick="ChangeClass(this.id)">色相旋轉</button>
+      <button id="but_5" onclick="ChangeClass(this.id)">負片</button>
+      <button id="but_6" onclick="ChangeClass(this.id)">透明化</button>
+      <button id="but_7" onclick="ChangeClass(this.id)">亮度</button>
+      <button id="but_8" onclick="ChangeClass(this.id)">對比</button>
+      <button id="but_9" onclick="ChangeClass(this.id)">模糊化</button>
+      <button id="but_10" onclick="ChangeClass(this.id)">下拉陰影</button>
+      <p><img id="img01" src="ch16/street.gif"></p>
+    </center>
+  </body>
+</html>

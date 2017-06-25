@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <title></title>
+    <script type="text/javascript">
+      function draw(){
+        var mycanvas = document.getElementById("paper");
+        if (mycanvas.getContext){
+        	var ctx = mycanvas.getContext("2d");
+          ctx.beginPath();
+          ctx.moveTo(25,50);
+          ctx.lineTo(275,50);
+          ctx.stroke();
+          
+          ctx.beginPath();
+          ctx.moveTo(25,100);
+          ctx.lineTo(150,125);
+          ctx.lineTo(275,100);
+          ctx.stroke();
+          
+          ctx.beginPath();
+          ctx.moveTo(25,150);
+          ctx.bezierCurveTo(25,250,200,250,200,150);
+          ctx.stroke();
+          
+          ctx.beginPath();
+          ctx.moveTo(50,250);
+          ctx.lineTo(25,275);
+          ctx.lineTo(75,275);
+          ctx.fill();
+          
+          ctx.get.ImageData(0,0,300,300);
+          ctx.putImageData(ImageData,50,50);
+        }
+      }
+    </script>
+    <style type="text/css">
+      canvas { border: 1px solid black; }
+    </style>
+  </head>
+  <body onload="draw()">
+    <canvas id ="paper" width="300" height="300"></canvas>
+  </body>
+</html>

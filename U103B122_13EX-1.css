@@ -1,0 +1,12 @@
+.p_text{
+  text-align:center;
+  background-image: url(ch13/bg15.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.bd{
+  background-color: blue;
+  background-image: url(ch13/02.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
