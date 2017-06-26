@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <script type="text/javascript">
+      var canvas;									//宣告畫布元件 
+      var ctx;										//宣告畫布的繪圖元件
+      var back = new Image();			//宣告新的背景儲存圖片變數
+      var oldBack = new Image();	//宣告舊的背景儲存圖片變數
+      var ship = new Image();			//宣告太空船的儲存圖片變數
+      var shipX=0;								//太空船新的X坐標
+      var shipY=0;								//太空船新的Y坐標
+      var oldShipX=0;							//太空船舊的X坐標
+      var oldShipY=0;							//太空船舊的Y坐標
+      
+      //var canvas2;								//宣告記分板畫布元件
+      //var ctx2;										//宣告記分板畫布的繪圖元件
+      var bomb = new Image();		  //宣告碰撞的背景儲存圖片變數
+      var direction = "R";				//太空船移動的方向旗標
+      var score = 0;							//初始分數為0
+      
+      function canvasSpaceGame(){
+      	canvas = document.getElementById("myCanvas");  //取得畫布元件(HTML TAG)
+        canvas2 = document.getElementById("myScore");	 //取得記分版畫布元件 (HTML TAG)
+        if (canvas2.getContext){
+        	ctx2=canvas2.getContext("2d");
+        }
+        
+        if (canvas.getContext){
+        	ctx=canvas.getContext("2d");  //設定畫布為2D模式
+          ctx.fillStyle="black"; 				//設定底色為黑
+          ctx.rect(0,0,300,300); 				//畫出黑色矩形(左上坐標0,0 右下坐標 300,300)
+          ctx.fill(); 									//填滿矩形(實心)
+          
+          back = ctx.getImageData(0,0,30,30);
+          
+          stars();											//生成50個STAR
+          
+          makeShip();										//生成左上角的太空船
+          
+          drawAsteroids();							//生成20個障礙物
+        }
+        
+        gameLoop = setInterval(doGameLoop, 16);		//設定每 16 秏秒重新定位太空船
+        
+        window.addEventListener("keydown", whatKey, true);	//設定鍵盤監聽事件
+      }
+      
+      function stars(){
+      	for (i=0; i<=50; i++){						//隨機畫50個白色的星星(圓點)
+        	var x=Math.floor(Math.random()*299);				//隨機的x坐標
+          var y=Math.floor(Math.random()*299);				//隨機的y坐標
+          
+          ctx.fillStyle="#EEEEEE";									  //設定顏色為白色
+          if (x>40 || y>40){		//保留左上角的空間給太空船
+            ctx.beginPath();													//畫筆開始
+            ctx.arc(x,y,3,0,Math.PI*2,true);					//畫圓型，坐標(x,y)，半徑r，完整圓形，順時針畫
+            ctx.closePath();													//畫筆結束
+            ctx.fill();																//填滿圓形
+        	}
+        }
+        oldBack = ctx.getImageData(0, 0, 30, 30);			//記錄左上角沒有太空船的畫面(0,0)-(30,30)
+      }
+      
+      function makeShip(){
+        //畫太空船的底部
+      	ctx.beginPath();
+        ctx.moveTo(28.4, 16.9);
+        ctx.bezierCurveTo(28.4, 19.7, 22.9, 22.0, 16.0, 22.0);
+        ctx.bezierCurveTo( 9.1, 22.0,  3.6, 19.7,  3.6, 16.9);
+        ctx.bezierCurveTo( 3.6, 14.1,  9.1, 11.8, 16.0, 11.8);
+        ctx.bezierCurveTo(22.9, 11.8, 28.4, 14.1, 28.4, 16.9);
+        ctx.closePath();
+        ctx.fillStyle="rgb(222, 103, 0)";
+        ctx.fill();
+        //畫太空船的頭部
+        ctx.beginPath();
+        ctx.moveTo(22.3, 12.0);
+        ctx.bezierCurveTo(22.3, 13.3, 19.4, 14.3, 15.9, 14.3);
+        ctx.bezierCurveTo(12.4, 14.3,  9.6, 13.3,  9.6, 12.0);
+        ctx.bezierCurveTo( 9.6, 10.8, 12.4,  9.7, 15.9,  9.7);
+        ctx.bezierCurveTo(19.4,  9.7, 22.3, 10.8, 22.3, 12.0);
+        ctx.closePath();
+        ctx.fillStyle="rgb(51, 190, 0)";
+        ctx.fill();
+        
+        ship = ctx.getImageData(0, 0, 30, 30);		//記錄左上角有太空船的畫面(0,0)-(30,30)
+        ctx.putImageData(oldBack, 0, 0);					//將沒有太空船的記錄畫面覆蓋掉左上角
+      }
+      
+      //自動更新畫面的迴圈(類似萬花筒的概念)
+      function doGameLoop(){
+      	ctx.putImageData(oldBack, oldShipX, oldShipY); //將舊位置還原成沒有太空船的狀態
+        ctx.putImageData(ship, shipX, shipY);					 //將太空船的圖片覆蓋到新的位置
+      }
+      
+      function whatKey(evt){
+      	var flag=0;			 		//宣告移動旗標(0:移動，1:不移動)
+        oldShipX=shipX;			//記錄當前X座標
+        oldShipY=shipY;			//記錄當前Y座標
+        oldBack=back;				//記錄當前坐標的圖片
+        
+        switch (evt.keyCode){
+          case 37:		//左移
+            shipX=shipX-30;
+            if (shipX<0){  		//若超出邊界
+            	shipX=0;				//設定為0(防呆)
+              flag=1;					//設定最後要還原X,Y
+            }
+            direction="L";
+            break;
+          case 38:		//下移
+            shipY=shipY-30;
+            if (shipY<0){			//若超出邊界
+            	shipY=0;				//設定為0(防呆)
+              flag=1;					//設定最後要還原X,Y
+            }
+            direction="U";
+            break;
+          case 39:		//右移
+            shipX=shipX+30;
+            if (shipX>270){		//若超出邊界
+            	shipX=270;			//設定為270(防呆)
+              flag=1;					//設定最後要還原X,Y
+            }
+            direction="R";
+            break;
+          case 40:		//上移
+            shipY=shipY+30;		
+            if (shipY>270){		//若超出邊界
+            	shipY=270;			//設定為270(防呆)
+              flag=1;					//設定最後要還原X,Y
+            }    
+            direction="D";
+            break;
+          case 65:		//按大寫的A
+            score = score+20;	//分數+20
+            flag =1;					//設定太空船不移動
+            neutralize();			//執行障礙物覆蓋
+            break;
+          default:
+            flag=1;
+            alert("Please only use the arrow keys");
+        }
+        if(flag){
+        	shipX=oldShipX;			//還原太空船的X坐標
+          shipY=oldShipY;			//還原太空船的Y坐標
+          back=oldBack;				//還原太空船目前位置 - 沒有太空船的狀態圖
+          score = score - 1;	//還原太空船的位置，分數必須扣回來
+        }else{
+        	back=ctx.getImageData(shipX, shipY, 30, 30);		//記錄下一個太空船移動的位置-沒有太空船的狀態圖
+        }
+        
+        score= score + 1;								//移動成功，分數加1
+        ctx2.clearRect(0,0,300,300);		//清除矩形範圍
+        ctx2.font="20 point Ariel";			//設定字形
+        ctx2.fillText("Score", 20, 15);	//在畫布上寫"Score"
+        ctx2.fillText(score, 100, 15);  //在畫布上寫出分數
+        
+        collideTest();				//移動完成後進行碰撞偵測
+      }
+      
+      //在畫布上產生20個障礙物
+      function drawAsteroids(){ 
+      	for (i=0;i<=20; i++){
+        	var a=Math.floor(Math.random()*299);  //隨機產生障礙物的X座標(0~300)
+          var b=Math.floor(Math.random()*299);  //隨機產生障礙物的Y座標(0~300)
+          
+          ctx.fillStyle="#FF0000";							//設定障礙物的顏色
+          //if (a>40 && b>40 && a<270 && b<270){	//保留左上角(40,40)和右下角(270,270)區域不能有障礙物
+            ctx.beginPath();										//啟動畫筆
+            ctx.arc(a, b, 10, 0, Math.PI*2, true);	//以(a,b)為圓心畫圓
+            ctx.closePath();										//結束畫筆
+            ctx.fill();            							//填滿圖形
+          //}
+        }
+        //在畫布上產生遮避區域
+        ctx.fillStyle="#00FF00";  							//設定終點標示的顏色(綠色)
+        ctx.beginPath();												//啟動畫筆
+        ctx.rect(270,270,30,30);								//在(270,270)位置上畫正方形
+        ctx.closePath();												//結束畫筆
+        ctx.fill();															//填滿圖形
+        
+        //記錄遮避區域的影像
+        bomb = ctx.getImageData(270,270,30,30);
+        
+        //在畫布上產生終點標示
+        ctx.fillStyle="#0000FF";  							//設定終點標示的顏色(藍色)
+        ctx.beginPath();												//啟動畫筆
+        ctx.rect(270,270,30,30);								//在(270,270)位置上畫正方形
+        ctx.closePath();												//結束畫筆
+        ctx.fill();															//填滿圖形
+        
+        //清空太空船的起始點位置
+        ctx.putImageData(back, 0, 30);
+        ctx.putImageData(back, 30, 0);
+        ctx.putImageData(back, 30, 30);
+        
+        //清空太空船的結束點位置
+        ctx.putImageData(back, 240, 240);
+        ctx.putImageData(back, 270, 240);
+        ctx.putImageData(back, 240, 270);
+      }
+
+      //碰撞偵測
+      function collideTest(){
+      	var clipWidth=20;												//碰撞區域的寬度
+        var clipDepth=20;												//碰撞區域的深度
+        var clipLength= clipWidth*clipDepth;		//影像資料的陣列長度
+        var clipOffset=5;												//碰撞區域起始點的位移量
+        var whatColor=ctx.getImageData(shipX+clipOffset, shipY+clipOffset, clipWidth, clipDepth); //太空船周邊區域的影像
+        
+        for (var i=0; i<clipLength*4; i+=4){		//對碰撞區域每一個pixel做檢查
+          if (whatColor.data[i]==255){					//若pixel的第i個陣列為255則表示撞到障礙物了
+            direction = "P";
+          	//alert("red");
+            break;
+          }
+          if (whatColor.data[i+2]==255){				//若pixel的第i+2個陣列為255則表示撞到終點了
+          	direction = "B";
+            //alert("blue");
+            break;
+          }
+        }
+
+        if (direction =="P") {bang();}					//若是碰撞 : 呼叫碰撞結束事件
+        if (direction =="B") {youWin();}				//若是到達 : 呼叫到達結束事件
+      }
+      
+      //當太空船發生碰撞後必須觸發的事件
+      function bang(){
+      	alert("Game over! You hit an asteroid.");							//提示遊戲結束:已發生碰撞
+        clearTimeout(gameLoop);																//關掉太空船移動蓋圖的定時機制
+        window.removeEventListener("keydown", whatKey, true);	//移除鍵盤監聽事件的注冊
+      }
+      
+      function youWin(){
+      	alert("Game over! you made it to home base.");				//提示遊戲結束:已到達目的地
+        clearTimeout(gameLoop);																//關掉太空船移動蓋圖的定時機制
+        window.removeEventListener("keydown", whatKey, true);	//移除鍵盤監聽事件的注冊
+      }
+      
+      //產生遮避區域
+      function neutralize(){
+      	switch(direction){
+          case "D":			//下移
+            ctx.putImageData(bomb, shipX, shipY+30);
+            break;
+          case "U":			//上移
+            ctx.putImageData(bomb, shipX, shipY-30);
+            break;
+          case "L":			//左移
+            ctx.putImageData(bomb, shipX-30, shipY);
+            break;
+          case "R":			//右移
+            ctx.putImageData(bomb, shipX+30, shipY);
+            break;
+          default:
+        }
+      }
+    </script>
+    <title></title>
+  </head>
+  <body onload="canvasSpaceGame()">
+    <h1> Canvas Space Game </h1>
+    <canvas id="myCanvas" width="300" height="300"> </canvas> <canvas id="myScore"
+
+      width="300" height="300"> </canvas>
+  </body>
+</html>
